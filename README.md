@@ -1,4 +1,4 @@
-Jasmine Testing App
+#Jasmine Testing App
 
 ## Index
 * Project Overview
@@ -9,7 +9,7 @@ Jasmine Testing App
 * License.
 
 
-# Project Overview
+## Project Overview
 
 This project is a web-based application that reads RSS feeds. and implement Jasmine Testing Suite to verify code is working as written..
 
@@ -21,7 +21,7 @@ This project is a web-based application that reads RSS feeds. and implement Jasm
 3. You can see the tests running and their results
 
 
-# Test Suites:
+## Test Suites:
 
 Tests implemented in this web application 
 
@@ -58,7 +58,7 @@ Test 2: Ensure that menu element has at least two options to choose from.
 Test 3: Test to Ensure that after changing menu options the feeds content changes.
 
 
-# Code Dependencies
+## Code Dependencies
 1. [Icon Font & SVG Icon Sets ❍ IcoMoon](https://icomoon.io/)
 2. [Normalize.css](https://necolas.github.io/normalize.css/)
 3. [Google Fonts](https://fonts.google.com/)
