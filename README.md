@@ -1,4 +1,4 @@
-#Jasmine Testing App
+# Jasmine Testing App
 
 ## Index
 * Project Overview
