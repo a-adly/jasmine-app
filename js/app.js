@@ -86,6 +86,23 @@ function loadFeed(id, cb) {
  */
 google.setOnLoadCallback(init);
 
+// future function updateFeeds
+function updateFeeds(cb) {
+    const select = document.querySelector("select");
+    loadFeed(select.selectedIndex, cb);
+}
+
+function createListMenu() {
+    const sel = document.createElement('select');
+    let options = '';
+    for (const feed of allFeeds) {
+        options += `<option>${feed.name}</option>`;
+    }
+    sel.innerHTML = options;
+    document.body.insertBefore(sel, document.querySelector('.feed'));
+    sel.addEventListener('change', updateFeeds());
+}
+
 /* All of this functionality is heavily reliant upon the DOM, so we
  * place our code in the $() function to ensure it doesn't execute
  * until the DOM is ready.
@@ -96,7 +113,8 @@ $(function() {
         feedItemTemplate = Handlebars.compile($('.tpl-feed-list-item').html()),
         feedId = 0,
         menuIcon = $('.menu-icon-link');
-
+    // add list menu of feeds sources to the page
+    createListMenu();
     /* Loop through all of our feeds, assigning an id property to
      * each of the feeds based upon its index within the array.
      * Then parse that feed against the feedItemTemplate (created

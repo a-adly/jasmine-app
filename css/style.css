@@ -1,6 +1,6 @@
 *,
 *:after,
-*:before: {
+*:before {
     box-sizing: inherit;
 }
 
@@ -83,6 +83,11 @@ h2 {
 
 .feed {
     margin: 4em 0 0;
+}
+
+select {
+    margin: 6em 1em 0;
+    text-align: center;
 }
 
 .entry {

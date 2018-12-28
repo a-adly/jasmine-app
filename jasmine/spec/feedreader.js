@@ -115,13 +115,13 @@ $(function() {
         });
     });
     /** 
-     * Future test suite "Select Menu" 
+     * Future test suite "Select Menu", this feature is added already
      * @description
      * future feature to add select menu html tag
      * containing different feed sources names
      * so user can choose his preferable feed from the list
      */
-    xdescribe('Select Menu', function() {
+    describe('Select Menu', function() {
         const select = document.querySelector("select");
         /** 
          * @description
@@ -151,7 +151,7 @@ $(function() {
                 oldContent = document.querySelector('.feed').innerHTML;
                 /* Change the selected option to any other new option */
                 let nextOption = select.selectedIndex + 1;
-                if (nextOption == select.options.length) select.selectedIndex = 0;
+                select.selectedIndex = (nextOption == select.options.length) ? 0 : nextOption;
                 /*
                 Future async function in app.js file
                 which updates the feeds on the page according to the selected option
